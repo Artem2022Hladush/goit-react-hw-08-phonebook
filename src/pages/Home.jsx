@@ -5,7 +5,7 @@ const Home = () => {
 	return (
 		<main>
 		<Container>
-			<Heading as='h1' size='3xl' ></Heading>
+			<Heading as='h1' size='3xl' >Home</Heading>
 			<Image src={img} alt='phonebook'/>
 		</Container>
 		</main>
