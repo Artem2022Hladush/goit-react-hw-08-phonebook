@@ -1,7 +1,7 @@
 import  {useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addContacts } from "redux/operations";
-import { getContacts } from "redux/selectors";
+import { addContacts } from "redux/contacts/operations";
+import { getContacts } from "redux/contacts/selectors";
 import css from "../ContactEditor/ContactEditor.module.css"
 import Notiflix from 'notiflix';
 

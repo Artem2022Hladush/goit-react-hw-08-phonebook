@@ -1,5 +1,5 @@
 import { Container, Heading, Image } from '@chakra-ui/react';
-import  img from '../img'
+import  img from '../img/phonebook.jpg'
 
 const Home = () => {
 	return (

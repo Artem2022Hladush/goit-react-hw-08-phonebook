@@ -20,20 +20,37 @@ const App= () => {
 const dispatch = useDispatch();
 const isRefreshing = useSelector(selectIsRefreshing)
 
-useEffect = (() => {
-  dispatch(refreshUser())
-}, [dispatch])
+useEffect(() => {
+  dispatch(refreshUser());
+}, [dispatch]);
+
   return (
     <>
-    
+   {!isRefreshing && (
+     <Routes>
+     <Route path="/" component={<SharedLayout/>}>
+
+       <Route index component={<Home/>} />
+
+       <Route path="/contacts" 
+       component={
+         <PrivateRoute restrictedTo="/login" component={<ContactPage/>}/>
+       } />
+
+       <Route path="/register"
+       component={
+       <RestrictedRoute restrictedTo="/contacts" component={<RegisterPage/>}/> 
+     }/>
+
+       <Route path="/login"
+       component={
+         <RestrictedRoute restrictedTo="/contacts" component={<LoginPage/>}/>
+       }/>
+       
+     </Route>
+   </Routes>
+   )}
     </>
-    // <div className="container">
-    //   <h1 className="title">Phonebook</h1>
-    // <ContactEditor />
-    // <Filter />
-    // <h2 className="title">Contacts</h2>
-    // <ContactList />
-    // </div>
   )
 };
 
