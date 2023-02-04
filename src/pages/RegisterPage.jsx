@@ -1,11 +1,10 @@
 import { RegisterForm } from "components/RegisterForm/RegisterForm";
 
-import { Heading } from "@chakra-ui/react";
 
 const RegisterPage = () => {
 	return (
 		<main>
-			<Heading>Register</Heading>
+			<h1>Register</h1>
 			<RegisterForm/>
 		</main>
 	)

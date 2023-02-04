@@ -30,22 +30,22 @@ console.log(useEffect)
     <>
    {!isRefreshing && (
      <Routes>
-     <Route path="/" component={<SharedLayout/>}>
+     <Route path="/" element={<SharedLayout/>}>
 
-       <Route index component={<Home/>} />
+       <Route index element={<Home/>} />
 
        <Route path="/contacts" 
-       component={
+       element={
          <PrivateRoute restrictedTo="/login" component={<ContactPage/>}/>
        } />
 
        <Route path="/register"
-       component={
+       element={
        <RestrictedRoute restrictedTo="/contacts" component={<RegisterPage/>}/> 
      }/>
 
        <Route path="/login"
-       component={
+       element={
          <RestrictedRoute restrictedTo="/contacts" component={<LoginPage/>}/>
        }/>
        

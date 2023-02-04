@@ -11,7 +11,7 @@ export const AppBar = () => {
 const isLoggedIn = useSelector(selectIsLoggedIn)
 
 	return (
-		<header className={css.hesder}>
+		<header className={css.header}>
 			<Navigation/>
 			{isLoggedIn ? <UserMenu/> : <AuthNav/>}
 		</header>
