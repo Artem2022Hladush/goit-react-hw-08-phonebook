@@ -24,6 +24,8 @@ useEffect(() => {
   dispatch(refreshUser());
 }, [dispatch]);
 
+console.log(dispatch)
+
   return (
     <>
    {!isRefreshing && (
