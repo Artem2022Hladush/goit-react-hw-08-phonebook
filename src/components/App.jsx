@@ -24,7 +24,7 @@ useEffect(() => {
   dispatch(refreshUser());
 }, [dispatch]);
 
-console.log(dispatch)
+console.log(useEffect)
 
   return (
     <>
