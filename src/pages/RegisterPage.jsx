@@ -1,10 +1,11 @@
 import { RegisterForm } from "components/RegisterForm/RegisterForm";
+import { Title } from "components/Title/Title";
 
 
 const RegisterPage = () => {
 	return (
 		<main>
-			<h1>Register</h1>
+			<Title>Register</Title>
 			<RegisterForm/>
 		</main>
 	)

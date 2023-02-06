@@ -1,11 +1,12 @@
 import { LoginForm } from "components/LoginForm/loginForm";
+import { Title } from "components/Title/Title";
 
 
 
 const LoginPage = () => {
  return (
 	<main>
-		<h1>Login Page</h1>
+		<Title>Login Page</Title>
 		<LoginForm/>
 	</main>
  )

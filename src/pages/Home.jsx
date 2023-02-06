@@ -1,13 +1,13 @@
-
-// import  img from '../img/phonebook.jpg'
+import { Title } from 'components/Title/Title';
+import { Image } from 'components/Image/Image';
+import  phonebook from '../img/phonebook.jpg'
 
 const Home = () => {
 	return (
 		<main>
-		{/* <Container>
-			<Heading as='h1' size='3xl' >Home</Heading>
-			<Image src={img} alt='phonebook'/>
-		</Container> */}
+			<Title>Home Page</Title>
+		
+		<Image phonebook={phonebook}/>
 		</main>
 	)
 }

@@ -2,6 +2,8 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { register } from "redux/auth/operations";
 import { TextField, Button, Box } from "@mui/material";
+import css from "../LoginForm/LoginForm.module.css";
+
 
 
  export const RegisterForm = () => {
@@ -34,7 +36,7 @@ const handleSubmit = e => {
  };
 
 	return(
-		<div>
+		<div className={css.wrapper}>
 			<form autoComplete="off" onSubmit={handleSubmit}>
 				<TextField
 				type="text"
@@ -44,6 +46,7 @@ const handleSubmit = e => {
 				id="standard-basic"
 				label="Name"
 				variant="standard"
+				fullWidth
 				/>
 					<TextField
 				type="email"
@@ -53,6 +56,7 @@ const handleSubmit = e => {
 				id="standard-basic"
 				label="Email"
 				variant="standard"
+				fullWidth
 				/>
 					<TextField
 				type="password"
@@ -62,6 +66,7 @@ const handleSubmit = e => {
 				id="standard-basic"
 				label="password"
 				variant="standard"
+				fullWidth
 				/>
 			<Box textAlign="center" marginTop={10}>
          	<Button variant="outlined" type="submit">
