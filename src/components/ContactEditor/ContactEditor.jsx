@@ -44,7 +44,7 @@ const handleSubmit = e => {
       return 1;
     }
 
-	const object = {name: form.elements.name.value ,  phone: form.elements.number.value};
+	const object = {name: form.elements.name.value ,  number: form.elements.number.value};
 	dispatch(addContacts(object))
 	form.reset()
 	reset();

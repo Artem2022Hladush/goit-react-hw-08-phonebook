@@ -1,6 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { nanoid } from "nanoid";
 
 // axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
@@ -18,9 +17,9 @@ export const fetchContacts = createAsyncThunk(
 
 export const addContacts = createAsyncThunk(
 	"contacts/addContacts",
-	async ({name, phone, id} , thunkAPI) => {
+	async ({name, number} , thunkAPI) => {
 		try {
-			const response = await axios.post("/contacts", { name, phone, id: nanoid() });
+			const response = await axios.post("/contacts", { name, number });
 			return response.data;
 		} catch (e) {
 			return thunkAPI.rejectWithValue(e.message);
