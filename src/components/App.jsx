@@ -1,6 +1,7 @@
 import { useEffect, lazy } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 import { refreshUser } from "redux/auth/operations";
 import { selectIsRefreshing } from "redux/auth/selectors";
@@ -49,6 +50,7 @@ useEffect(() => {
          <RestrictedRoute redirectTo="/contacts" component={<LoginPage/>}/>
        }/>
        
+       <Route path="*" element={<Navigate to={'/'} />} />
      </Route>
    </Routes>
    )}

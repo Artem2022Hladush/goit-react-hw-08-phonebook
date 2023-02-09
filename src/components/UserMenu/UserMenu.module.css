@@ -19,10 +19,6 @@ background-color: dodgerblue;
 	color: cyan;
 }
 
-.userName{
-	margin-left: 5px;
-}
-
 .wrapper{
 	display: flex;
 	align-items: center;
