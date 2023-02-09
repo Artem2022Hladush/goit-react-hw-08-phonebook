@@ -36,17 +36,17 @@ useEffect(() => {
 
        <Route path="/contacts" 
        element={
-         <PrivateRoute restrictedTo="/login" component={<ContactPage/>}/>
+         <PrivateRoute redirectTo="/login" component={<ContactPage/>}/>
        } />
 
        <Route path="/register"
        element={
-       <RestrictedRoute restrictedTo="/contacts" component={<RegisterPage/>}/> 
+       <RestrictedRoute redirectTo="/contacts" component={<RegisterPage/>}/> 
      }/>
 
        <Route path="/login"
        element={
-         <RestrictedRoute restrictedTo="/contacts" component={<LoginPage/>}/>
+         <RestrictedRoute redirectTo="/contacts" component={<LoginPage/>}/>
        }/>
        
      </Route>

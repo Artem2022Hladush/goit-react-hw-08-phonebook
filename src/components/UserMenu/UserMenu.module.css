@@ -15,9 +15,14 @@ cursor:pointer;
 background-color: dodgerblue;
 }
 .text{
-	margin-left: 15px;
-	color: yellowgreen;
+	display: flex;
+	color: cyan;
 }
+
+.userName{
+	margin-left: 5px;
+}
+
 .wrapper{
 	display: flex;
 	align-items: center;
